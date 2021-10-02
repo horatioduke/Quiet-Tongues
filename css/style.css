@@ -1,0 +1,1257 @@
+/*
+Ello! This is the stylesheet for quiettongues.com
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Generic
+    - "Modern" Normalize
+    - Colour Variables, Selectors and Scrollbar
+    - Font Sizing and REM Scaling
+    - Link Styling
+    - Form Elements
+    - Blockquotes
+# Fixes, Tweaks and Additional Custom Classes
+    - Image and FontAwesome Icon Fixes
+    - Quiet Tongues Specials
+    - Socials
+    - Modals
+    - Glider
+# Main Navigation
+    - The Burger
+    - The Menu Overlay
+# Section Styling
+    - General Section Styling
+    - Welcome Section
+    - About Section
+    - Collaboration Section
+    - Testimonial Section
+    - Contact Section
+    - Footer
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* "Modern" Normalize
+--------------------------------------------- */
+
+/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+
+:root {
+    -moz-tab-size: 4;
+    tab-size: 4
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'
+}
+
+hr {
+    height: 0;
+    color: inherit
+}
+
+abbr[title] {
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+table {
+    text-indent: 0;
+    border-color: inherit
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+:-moz-ui-invalid {
+    box-shadow: none
+}
+
+legend {
+    padding: 0
+}
+
+progress {
+    vertical-align: baseline
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+summary {
+    display: list-item
+}
+
+
+/* Colour Variables, Selectors and Scrollbar
+--------------------------------------------- */
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-red-shadow: #721d28;
+    --main-red-highlight: #c44556;
+    --main-black: #0e1111;
+    --main-gray: #343434;
+    --main-yellow: #FFA812;
+    --main-blue: #2e4064;
+    --main-gron: #13d179;
+    --main-velvetta: #6942d4;
+    --main-transparent: rgba(0, 0, 0, 0.61)
+}
+  
+::selection {
+    color: var(--main-gron);
+    background: var(--main-blue)
+}
+
+::-moz-selection {
+    color: var(--main-gron);
+    background: var(--main-blue)
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+	background-color: var(--main-black)
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-white)
+}
+
+
+/* Font and REM Sizing
+--------------------------------------------- */
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-color: var(--main-black);
+    color: var(--main-white)
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+      font-size: 82%
+    }
+  }
+  
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 78%
+}
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 72%
+}
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h1 { font-size: 7.2rem }
+h2 { font-size: 5.4rem }
+h3 { font-size: 4.8rem }
+h4 { font-size: 4.2rem }
+h5 { font-size: 3.6rem }
+h6 { font-size: 3.0rem }
+
+h1.scale-down { font-size: 4.8rem }
+h2.scale-down { font-size: 4.2rem }
+h3.scale-down { font-size: 3.6rem }
+h4.scale-down { font-size: 3.0rem }
+h5.scale-down { font-size: 2.4rem }
+h6.scale-down { font-size: 1.8rem }
+
+h1.scale-up { font-size: 10.2rem }
+h2.scale-up { font-size: 9.6rem }
+h3.scale-up { font-size: 9.0rem }
+h4.scale-up { font-size: 8.4rem }
+h5.scale-up { font-size: 7.2rem }
+h6.scale-up { font-size: 6.6rem }
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.5
+}
+
+.p.scale-down {
+    font-size: 1.2rem
+}
+
+p.scale-up {
+    font-size: 3.6rem
+}
+
+.arial-fix {
+    font-family: Arial, sans-serif !important;
+}
+
+
+/* Link Styling
+--------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+p a {
+    padding-bottom: 3px;
+    color: inherit;
+    transition: all .2s ease-out
+}
+
+p a:hover {
+    color: var(--main-red);
+}
+
+
+/* Form Elements
+--------------------------------------------- */
+
+form {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0 auto
+}
+
+button, .button {
+    cursor: pointer;
+    outline: none; 
+    border: 0;
+    background: var(--main-black);
+    color: var(--main-white);
+    padding: 1.8rem 3.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.05s;
+    position: relative;
+    top: 0;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    display: inline-block;
+    font-style: italic
+}
+
+button:hover, .button:hover {
+    background: var(--main-gray)
+}
+
+button:active, .button:active {
+    top: 3px;
+    box-shadow: 0px 0px 0px var(--main-red-shadow)
+}
+
+button.submit-button {
+    width: 100%
+}
+
+.button.gron {
+    background-color: var(--main-gron);
+}
+
+.button.moostardo {
+    background-color: var(--main-yellow);
+}
+
+.button.velvetta {
+    background-color: var(--main-velvetta);
+}
+
+label {
+    display: block
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.8rem;
+    margin: 1.8rem 0;
+    color: var(--main-black);
+    border: 1px solid;
+    border-color: var(--main-white);
+    background-color: var(--main-white);
+    background-clip: padding-box;
+    border-radius: 0.24rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color: var(--main-black);
+    box-shadow: 5px 5px var(--main-black);
+    line-height: 1.5
+}
+
+textarea {
+    min-height: 18rem;
+    min-width: 100%
+}
+  
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--main-gray);
+    box-shadow: 5px 5px var(--main-gray)
+}
+
+.form-group {
+    margin-bottom: 1.8rem
+}
+
+
+/* Blockquotes
+--------------------------------------------- */
+
+blockquote {
+    font-size: 2.4rem;
+    font-style: italic;
+    color: var(--main-gray);
+    padding: 9.0rem 3.6rem 4.2rem 6.0rem;
+    border-left: 8px solid var(--main-yellow);
+    border-right: 8px solid var(--main-yellow);
+    line-height : 1.5;
+    position: relative;
+    background:var(--main-white);
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%)
+}
+
+blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: var(--main-red);
+    font-size: 7.2rem;
+    position: absolute;
+    top: 6.0rem;
+    left: 3.0rem
+}
+
+blockquote::after {
+    content: ''
+}
+  
+blockquote footer {
+    color: var(--main-gray);
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1.2rem
+}
+
+/*--------------------------------------------------------------
+# Fixes, Tweaks and Additional Custom Classes
+--------------------------------------------------------------*/
+
+
+/* Image and FontAwesome Icon Fixes
+--------------------------------------------- */
+
+img {
+    width: 100%;
+    height: auto
+}
+
+i.fa-scale-l {
+    font-size: 7.2rem
+}
+
+i.fa-scale-m {
+    font-size: 4.8rem
+}
+
+i.fa-scale-s {
+    font-size: 3.0rem
+}
+
+
+/* Quiet Tongues Specials
+--------------------------------------------- */
+
+.blurred-bg {
+    background-color: var(--main-transparent);
+    backdrop-filter: blur(5px)
+}
+
+.ud-q {
+    display: inline-block;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg); 
+}
+
+.inverted {
+    background-color: var(--main-white);
+    color: var(--main-black)
+}
+
+.centered-text {
+    text-align: center
+}
+
+.make-italic {
+    font-style: italic;
+}
+
+.make-cool-italic {
+    font-style: italic;
+    color: var(--main-black);
+    background-color: var(--main-white)
+}
+
+.upperoony {
+    text-transform: uppercase
+}
+
+.loweroony {
+    text-transform: lowercase !important;
+}
+
+.aos-fix {
+    overflow-x: hidden;
+    overflow-y: hidden
+}
+
+.highlighted-band-name {
+    color: var(--main-red);
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+
+/* Socials
+--------------------------------------------- */
+
+.socials i {
+    margin: 0 2.4rem
+}
+
+.socials a {
+    transition: all .2s ease-out;
+    padding: 1.2rem;
+    margin: 1.2rem;
+    background-color: var(--main-black);
+    display: inline-block;
+    transform: skewX(-10deg);
+    color: var(--main-white);
+}
+
+.socials a:hover {
+    color: var(--main-red)
+}
+
+
+/* Modals
+--------------------------------------------- */
+
+.modal {
+    position: fixed;
+    pointer-events: none;
+    top: 0px;
+    left: 0px;
+    background: rgba(51,51,51,0.75);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    transition: 0.3s
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.modal.active .floating-box {
+    top: 50%
+}
+
+.modal .close {
+    cursor: pointer;
+    color: var(--main-white);
+    transition: 0.3s;
+    z-index: 5
+}
+
+.modal .close:hover {
+    color: var(--main-red);
+    transition: 0.3s
+}
+
+.modal .floating-box {
+    display: block;
+    border-radius: 0.24rem;
+    text-align: left;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.3s;
+    max-width: 600px
+}
+
+.modal .floating-box-text {
+    clip-path: polygon(0 3.6rem, 100% 0, 100% calc(100% - 3.6rem), 0 100%);
+    padding: 3.0rem 3.0rem 6.0rem 3.0rem;
+    background: var(--main-black)
+}
+
+.modal .floating-box-text p {
+    padding-bottom:1.8rem
+}
+
+.modal .floating-box h3 {
+    color: var(--main-red);
+    margin-bottom: 0
+}
+
+
+/* Glider
+--------------------------------------------- */
+
+.glide {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.glide * {
+    box-sizing: inherit
+}
+
+.glide__track {
+    overflow: hidden;
+    clip-path: polygon(0 3.6rem, 100% 0, 100% calc(100% - 4.2rem), 0 calc(100% - 0.6rem))
+}
+
+.glide__slides {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-Y;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.glide__slides--dragging {
+    user-select: none
+}
+
+.glide__slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    white-space: normal;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+.glide__slide a {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.glide__arrows {
+    -webkit-touch-callout: none;
+    user-select: none
+}
+
+.glide__bullets {
+    -webkit-touch-callout: none;
+    user-select: none
+}
+
+.glide--rtl {
+    direction: rtl
+}
+
+.glide__arrow {
+    position: absolute;
+    display: block;
+    top: 50%;
+    z-index: 2;
+    color: var(--main-white);
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    transform: translateY(-50%);
+    line-height: 1
+}
+
+.glide__arrow:focus {
+    outline: none
+}
+
+.glide__arrow:hover {
+    color: var(--main-red);
+    transition: all .2s ease-out
+}
+
+.glide__arrow--left {
+    left: 2em
+}
+
+.glide__arrow--right {
+    right: 2em
+}
+
+.glide__arrow--disabled {
+    opacity: 0.33
+}
+
+.glide__bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: 2em;
+    left: 50%;
+    display: inline-flex;
+    list-style: none;
+    transform: translateX(-50%)
+}
+
+.glide__bullet {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0.25em
+}
+
+.glide__bullet:focus {
+    outline: none
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.glide__bullet--active {
+    background-color: white
+}
+
+.glide--swipeable {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab
+}
+
+.glide--dragging {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing
+}
+
+/*--------------------------------------------------------------
+# Main Navigation
+--------------------------------------------------------------*/
+
+
+/* The Burger
+--------------------------------------------- */
+
+.burger-bun  {
+    background-color: var(--main-white);
+    width: 100%;
+    z-index: 5;
+    display: block;
+    position: fixed;
+    padding: 36px;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px
+}
+
+.nav-burger {
+    position: fixed;
+    right: 36px;
+    top: 42px;
+    cursor: pointer;
+    background: var(--main-black);
+    background-clip: content-box;
+    width: 48px;
+    height: 36px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out
+}
+
+.nav-burger:before, .nav-burger:after {
+    content: "";
+    position: absolute;
+    background: var(--main-black);
+    height: 6px;
+    width: 50%;
+    will-change: rotate;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+}
+
+.nav-burger:before {
+    top: 12px
+}
+
+.nav-burger:after {
+    bottom: 12px;
+    width: 80%
+}
+
+.nav-burger:hover:before, .nav-burger:hover:after {
+    width: 100%
+}
+
+.nav-burger.active {
+    background: transparent;
+    background-clip: content-box
+}
+
+.nav-burger.active:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 0;
+    background: var(--main-black);
+    width: 100%
+}
+
+.nav-burger.active:after {
+    bottom: 0;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    background: var(--main-black);
+    width: 100%
+}
+
+
+/* The Menu Overlay
+--------------------------------------------- */
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform-origin: right top;
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 5
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1)
+}
+
+.overlay.open li {
+    display: block;
+    animation: fadeInLeft 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+    animation-delay: 0.4s;
+    transform: rotate(-7deg);
+    transform-origin: left bottom;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900
+}
+
+.overlay.open li:nth-of-type(2) {
+    animation-delay: 0.5s
+}
+
+.overlay.open li:nth-of-type(3) {
+    animation-delay: 0.6s
+}
+
+.overlay.open li:nth-of-type(4) {
+    animation-delay: 0.7s
+}
+
+.overlay.open li:nth-of-type(5) {
+    animation-delay: 0.8s
+}
+
+.overlay-menu {
+    text-align: center
+}
+
+.overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    height: 100%
+}
+
+.overlay-menu ul li {
+    display: block;
+    position: relative;
+    opacity: 0;
+    width: 100%
+}
+
+.overlay-menu ul li a {
+    display: inline-block;
+    color: var(--main-black);
+    text-decoration: none;
+    font-size: 6rem;
+    padding: 10px 40px;
+    margin: 5px 0;
+    transition: 0.2s;
+    background: var(--main-white)
+}
+
+.overlay-menu ul li a:hover, .overlay-menu ul li a:active, .overlay-menu ul li a:focus {
+    padding-left: 6.6rem;
+    padding-right: 6.6rem
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        left: 50px
+   }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg)
+   }
+}
+
+/*--------------------------------------------------------------
+# Section Styling
+--------------------------------------------------------------*/
+
+
+/* General Section Styling
+--------------------------------------------- */
+
+.flexy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.flexy-2 {
+    display: flex
+}
+
+@media(max-width:72em) {
+    .flexy-2 {
+        flex-direction: column;
+        padding: 2.4rem 6rem
+    }
+}
+
+.griddy {
+    display: grid
+}
+
+.name-margin-fix {
+    font-size: 10rem;
+    margin-bottom: 0
+}
+
+/* Welcome Section
+--------------------------------------------- */
+
+.fs-vid {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1
+}
+
+.jumbo-band-name {
+    text-align: center
+}
+
+.welcome-section {
+    min-height: 100vh
+}
+
+.listen-now {
+    font-weight: 900;
+}
+
+.listen-now a {
+    color: var(--main-red);
+    transition: all .2s ease-out
+}
+
+.listen-now a:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out
+}
+
+.strapline {
+    font-weight: 100
+}
+
+.ticker-tape-area .input-text {
+    visibility: hidden;
+    display: none
+}
+
+.ticker-tape-area .output-text {
+    display: block;
+    min-height: 9.0rem;
+    text-transform: uppercase;
+    font-style: italic
+}
+
+.ticker-tape-area .output-text:after {
+    content: "█";
+    position: relative;
+    bottom: 1px;
+    left: 3px;
+    animation-duration: 300ms;
+    animation-name: fade;
+    animation-direction: alternate;
+    animation-iteration-count: infinite
+}
+
+@keyframes fade {
+    from {
+        opacity: 1
+   }
+    to {
+        opacity: 0
+   }
+}
+
+/* Tour Section
+--------------------------------------------- */
+
+.tour-section {
+    padding: 2.4rem 0;
+    background-color: var(--main-white);
+    color: var(--main-black)
+}
+
+.tour-header {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 1.2rem
+}
+
+.tour-header h2 {
+    margin: 
+}
+
+.tour-header-sub {
+    display: none;
+}
+
+.tour-grid {
+    padding: 3rem 10.2rem;
+    align-items: center;
+    font-family: Arial, sans-serif !important;
+    font-style: italic;
+    align-content: center;
+    justify-content: center;
+    gap: 10.2rem
+}
+
+.gig-title {
+    margin-top: 0;
+    padding: 1.2rem;
+    transition: all .2s ease-out
+}
+
+.gig-subtitle {
+    transition: all .2s ease-out
+}
+
+.tour-grid a {
+    padding: 1.2rem;
+    margin: 1.2rem;
+    background-color: var(--main-black);
+    display: inline-block;
+    color: var(--main-white)
+}
+
+.tour-grid a:hover, .tour-grid a:hover .gig-tix-btn {
+    color: var(--main-red);
+}
+
+.gig-tix-btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    display: inline-block;
+    background-color: var(--main-white);
+    color: var(--main-black);
+    padding: 1.2rem;
+    transition: all .2s ease-out
+}
+
+@media(max-width:75em) {
+    .tour-section {
+        padding: 3rem 0
+    }
+}
+
+/* About Section
+--------------------------------------------- */
+
+.about-section {
+    padding: 9rem 6rem;
+    background: url('../img/lift.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.band-bio {
+    max-width: 72rem    
+}
+
+.band-bio h2 {
+    padding: 3rem;
+    text-align: center
+}
+
+.blurb {
+    padding: 3rem
+}
+
+/* Band Profiles Section
+--------------------------------------------- */
+
+.profiles-section {
+    padding: 10.2rem;
+}
+
+.instruments {
+    display: none
+}
+
+.band-profiles-grid {
+    gap: 7.2rem;
+}
+
+.member-name h3 {
+    padding: 1.8rem;
+}
+
+.member img{
+    width: 100%;
+    height: auto;
+}
+
+@media(max-width:75em) {
+    .member {
+        padding: 3rem 0
+    }
+}
+
+
+/* Contact Section
+--------------------------------------------- */
+
+.contact-section {
+    background-color: var(--main-black);
+    padding: 5.4rem 10.2rem 10.2rem 10.2rem
+}
+
+.contact-grid {
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3.6rem;
+    font-weight: 900
+}
+
+.newsletter-form {
+    gap: 1.2rem
+}
+
+.newsletter-form-group {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: var(--main-white);
+    color:var(--main-black);
+    padding: 1.2rem
+}
+
+.newsletter-input {
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: none;
+    box-shadow: none
+}
+
+.newsletter-form .submit-button {
+    background-color: var(--main-white);
+    color: var(--main-black);
+    transition: all .2s ease-out
+}
+
+.newsletter-form .submit-button:hover {
+    color: var(--main-red)
+}
+
+.qt-email-address {
+    padding: 1.8rem 3.6rem;
+}
+
+/* Footer
+--------------------------------------------- */
+
+.main-footer {
+    justify-content: space-evenly;
+    padding: 4.2rem
+}
+
+.copyright {
+    transform: skewX(-10deg);
+}
+
+@media(max-width:75em) {
+    .footer-segment {
+        margin: 0;
+        padding: 0
+    }
+}
