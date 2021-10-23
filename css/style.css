@@ -477,7 +477,15 @@ i.fa-scale-s {
 .ud-q {
     display: inline-block;
     position: relative;
-    transform: rotateX(180deg) 
+    transform: rotateX(180deg)
+}
+
+.q-fixed-1 {
+    top: 0.01em
+}
+
+.q-fixed-2 {
+    top: 0.02em
 }
 
 .inverted {
@@ -514,6 +522,12 @@ i.fa-scale-s {
 
 .highlighted-band-name {
     color: var(--main-red);
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.highlighted-band-name-gron {
+    color: var(--main-yellow);
     text-transform: uppercase;
     font-weight: 700
 }
@@ -993,7 +1007,7 @@ i.fa-scale-s {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -10
@@ -1234,7 +1248,18 @@ i.fa-scale-s {
 }
 
 .qt-email-address {
-    padding: 1.8rem 3.6rem;
+    padding: 1.8rem 3.6rem
+}
+
+.contact-column-right a {
+    color: var(--main-black);
+    transition: 0.2s;
+    background: var(--main-white)
+}
+
+.contact-column-right a:hover {
+    color: var(--main-red);
+    background: var(--main-white)
 }
 
 /* Footer
