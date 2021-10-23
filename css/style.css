@@ -1008,10 +1008,7 @@ section {
 --------------------------------------------- */
 
 .fs-vid {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: absolute
+    position: fixed
 }
 
 .jumbo-band-name {
