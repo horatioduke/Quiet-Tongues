@@ -476,8 +476,8 @@ i.fa-scale-s {
 
 .ud-q {
     display: inline-block;
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg); 
+    position: relative;
+    transform: rotateX(180deg) 
 }
 
 .inverted {
@@ -570,7 +570,7 @@ i.fa-scale-s {
     cursor: pointer;
     color: var(--main-white);
     transition: 0.3s;
-    z-index: 5
+    z-index: 98
 }
 
 .modal .close:hover {
@@ -774,7 +774,7 @@ i.fa-scale-s {
 .burger-bun  {
     background-color: var(--main-white);
     width: 100%;
-    z-index: 5;
+    z-index: 97;
     display: block;
     position: fixed;
     padding: 36px;
@@ -867,7 +867,7 @@ i.fa-scale-s {
     visibility: hidden;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
-    z-index: 5
+    z-index: 97
 }
 
 .overlay.open {
@@ -993,10 +993,10 @@ i.fa-scale-s {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: -1
+    z-index: -10
 }
 
 .jumbo-band-name {
