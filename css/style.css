@@ -1000,6 +1000,10 @@ i.fa-scale-s {
     margin-bottom: 0
 }
 
+section {
+    position: relative;
+}
+
 /* Welcome Section
 --------------------------------------------- */
 
@@ -1009,8 +1013,7 @@ i.fa-scale-s {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: -10
+    left: 0
 }
 
 .jumbo-band-name {
