@@ -1000,6 +1000,10 @@ i.fa-scale-s {
     margin-bottom: 0
 }
 
+section {
+    z-index: -9
+}
+
 /* Welcome Section
 --------------------------------------------- */
 
