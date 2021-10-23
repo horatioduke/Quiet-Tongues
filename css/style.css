@@ -1001,7 +1001,7 @@ i.fa-scale-s {
 }
 
 section {
-    z-index: -9
+    -webkit-transform: translate3d(0,0,0);
 }
 
 /* Welcome Section
@@ -1013,8 +1013,7 @@ section {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: -10
+    left: 0
 }
 
 .jumbo-band-name {
