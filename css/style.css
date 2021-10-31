@@ -584,7 +584,7 @@ i.fa-scale-s {
     cursor: pointer;
     color: var(--main-white);
     transition: 0.3s;
-    z-index: 98
+    z-index: 5
 }
 
 .modal .close:hover {
@@ -788,7 +788,7 @@ i.fa-scale-s {
 .burger-bun  {
     background-color: var(--main-white);
     width: 100%;
-    z-index: 97;
+    z-index: 5;
     display: block;
     position: fixed;
     padding: 36px;
@@ -881,7 +881,7 @@ i.fa-scale-s {
     visibility: hidden;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
-    z-index: 97
+    z-index: 3
 }
 
 .overlay.open {
@@ -938,7 +938,7 @@ i.fa-scale-s {
 }
 
 .overlay-menu ul li a {
-    display: inline-block;
+    display: block;
     color: var(--main-black);
     text-decoration: none;
     font-size: 6rem;
@@ -949,8 +949,7 @@ i.fa-scale-s {
 }
 
 .overlay-menu ul li a:hover, .overlay-menu ul li a:active, .overlay-menu ul li a:focus {
-    padding-left: 6.6rem;
-    padding-right: 6.6rem
+    color: var(--main-yellow)
 }
 
 @keyframes fadeInLeft {
@@ -1000,10 +999,6 @@ i.fa-scale-s {
     margin-bottom: 0
 }
 
-section {
-    -webkit-transform: translate3d(0,0,0);
-}
-
 /* Welcome Section
 --------------------------------------------- */
 
@@ -1013,7 +1008,8 @@ section {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0
+    left: 0;
+    z-index: -1
 }
 
 .jumbo-band-name {
@@ -1089,14 +1085,6 @@ section {
     padding: 1.2rem
 }
 
-.tour-header h2 {
-    margin: 
-}
-
-.tour-header-sub {
-    display: none;
-}
-
 .tour-grid {
     padding: 3rem 10.2rem;
     align-items: center;
@@ -1129,13 +1117,18 @@ section {
     color: var(--main-red);
 }
 
+.tour-grid h2 {
+    transition: all .2s ease-out
+}
+
 .gig-tix-btn {
     text-transform: uppercase;
     font-weight: 900;
-    display: inline-block;
+    display: block;
     background-color: var(--main-white);
     color: var(--main-black);
-    padding: 1.2rem;
+    padding: 2.4rem;
+    margin-bottom: 0;
     transition: all .2s ease-out
 }
 
