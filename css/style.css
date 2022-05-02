@@ -541,10 +541,9 @@ i.fa-scale-s {
 .socials a {
     transition: all .2s ease-out;
     padding: 0.6rem;
-    margin: 0.6rem;
+    margin: 0 0.6rem;
     background-color: var(--main-black);
     display: inline-block;
-    transform: skewX(-10deg);
     color: var(--main-white);
 }
 
@@ -704,6 +703,7 @@ nav.main-menu li.nav-about a:hover {
 
 .newsletter-form {
     padding: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .newsletter-input-div {
