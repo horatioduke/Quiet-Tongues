@@ -577,6 +577,10 @@ i.fa-scale-s {
     font-weight: 900
 }
 
+.manager-name {
+    font-weight: 900
+}
+
 
 /* Socials
 --------------------------------------------- */
@@ -773,6 +777,22 @@ ul.epk-media-social a {
     color: var(--main-white);
 }
 
+ul.complete-gig-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.complete-gig-list li {
+    background-color: var(--main-white);
+    color: var(--main-black);
+    transform: skew(-10deg);
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    margin: 1.2rem;
+    display: inline-block;
+}
+
 
 /* Welcome Section
 --------------------------------------------- */
@@ -960,7 +980,7 @@ ul.epk-media-social a {
 
 .epk-section {
     padding: 1rem 6rem 6rem 6rem;
-    background: url('../img/band_wide.jpg') no-repeat center center fixed;
+    background: url('../img/band_wide.jpg');
     background-size: cover;
 }
 
