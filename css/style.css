@@ -981,6 +981,7 @@ ul.complete-gig-list li {
 .epk-section {
     padding: 1rem 6rem 6rem 6rem;
     background: url('../img/band_wide.jpg');
+    background-position: center;
     background-size: cover;
 }
 
