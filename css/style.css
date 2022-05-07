@@ -561,6 +561,10 @@ i.fa-scale-s {
     font-weight: 900
 }
 
+.band-email {
+    font-weight: 900
+}
+
 .highlighted-band-name {
     color: var(--main-red);
     text-transform: uppercase;
@@ -696,101 +700,6 @@ nav.main-menu li.nav-live-shows a:hover {
 nav.main-menu li.nav-about a:hover {
     color: var(--main-red);
     transition: all .2s ease-out;
-}
-
-/* EPK Navigation
---------------------------------------------- */
-
-nav.epk-main-menu ul {
-    display: flex;
-    justify-content: right;
-}
-
-nav.epk-main-menu ul {
-    padding: 0;
-}
-
-nav.epk-main-menu li {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 3rem;
-    list-style: none;
-    background-color: var(--main-black);
-    padding: 1.2rem;
-    margin: 0.6rem;
-    font-weight: 900;
-    display: inline;
-    text-align: center;
-    transform: skew(-10deg);
-}
-
-nav.epk-main-menu li a {
-    color: var(--main-white);
-}
-
-nav.epk-main-menu li a.email-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.facebook-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.instagram-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.twitter-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.youtube-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.spotify-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.soundcloud-icon:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-nav.epk-main-menu li a.dice-fm-txt:hover {
-    color: var(--main-gron);
-    transition: all .2s ease-out;
-}
-
-ul.epk-media-social {
-    color: var(--main-white);
-    list-style: none;
-}
-
-ul.epk-media-social a {
-    color: var(--main-white);
-}
-
-ul.complete-gig-list {
-    margin: 0;
-    padding: 0;
-}
-
-ul.complete-gig-list li {
-    background-color: var(--main-white);
-    color: var(--main-black);
-    transform: skew(-10deg);
-    font-weight: 900;
-    text-transform: uppercase;
-    padding: 1.2rem;
-    margin: 1.2rem;
-    display: inline-block;
 }
 
 
@@ -957,7 +866,8 @@ ul.complete-gig-list li {
 
 .about-section {
     padding: 9rem 6rem;
-    background: url('../img/lift.jpg') no-repeat center center fixed;
+    background: url('../img/lift.jpg');
+    background-position: center;
     background-size: cover;
 }
 
@@ -1029,4 +939,107 @@ ul.complete-gig-list li {
 .main-footer {
     padding: 1rem;
     text-align: center;
+}
+
+/* EPK Navigation
+--------------------------------------------- */
+
+nav.epk-main-menu ul {
+    display: flex;
+    justify-content: right;
+}
+
+nav.epk-main-menu ul {
+    padding: 0;
+}
+
+nav.epk-main-menu li {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    list-style: none;
+    background-color: var(--main-black);
+    padding: 1.2rem;
+    margin: 0.6rem;
+    font-weight: 900;
+    display: inline;
+    text-align: center;
+    transform: skew(-10deg);
+}
+
+nav.epk-main-menu li a {
+    color: var(--main-white);
+}
+
+nav.epk-main-menu li a:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+.epk-profiles-section {
+    padding-bottom: 0;
+}
+
+@media(max-width:75em) {
+    .epk-profiles-section {
+        padding: 0;
+    }
+}
+
+ul.epk-media-social {
+    color: var(--main-white);
+    list-style: none;
+}
+
+ul.epk-media-social a {
+    color: var(--main-white);
+}
+
+ul.epk-socials {
+    padding: 0;
+    align-items: center;
+}
+
+.epk-socials-fa {
+    margin-right: 3rem;
+}
+
+ul.epk-socials a {
+    color: var(--main-gron);
+}
+
+ul.epk-socials a:hover {
+    color: var(--main-yellow);
+}
+
+ul.epk-socials li {
+    background-color: var(--main-blue);
+    color: var(--main-gron);
+    transform: skew(-10deg);
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    margin: 1.2rem;
+    display: inline-block;
+}
+
+ul.complete-gig-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.complete-gig-list li {
+    background-color: var(--main-blue);
+    color: var(--main-gron);
+    transform: skew(-10deg);
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    margin: 1.2rem;
+    display: inline-block;
+}
+
+.epk-download-list a:hover {
+    color: var(--main-yellow);
+    transition: all .2s ease-out;
 }
