@@ -197,6 +197,50 @@ summary {
     --main-velvetta: #6942d4;
     --main-transparent: rgba(0, 0, 0, 0.61)
 }
+
+.q-white {
+    color: var(--main-white);
+}
+
+.q-red {
+    color: var(--main-red);
+}
+
+.q-red-shadow {
+    color: var(--main-red-shadow)
+}
+
+.q-red-highlight {
+    color: var(--main-red-highlight)
+}
+
+.q-black {
+    color: var(--main-black)
+}
+
+.q-grey {
+    color: var(--main-gray)
+}
+
+.q-yellow {
+    color: var(--main-yellow)
+}
+
+.q-blue {
+    color: var(--main-blue)
+}
+
+.q-gron {
+    color: var(--main-gron);
+}
+
+.q-velvetta {
+    color: var(--main-velvetta);
+}
+
+.q-transparent {
+    color: var(--main-transparent);
+}
   
 ::selection {
     color: var(--main-gron);
@@ -276,7 +320,7 @@ h4.scale-up { font-size: 8.4rem }
 h5.scale-up { font-size: 7.2rem }
 h6.scale-up { font-size: 6.6rem }
 
-p {
+p, ul {
     font-family: 'Raleway', sans-serif;
     font-size: 2.4rem;
     line-height: 1.5
@@ -513,16 +557,24 @@ i.fa-scale-s {
     overflow-y: hidden
 }
 
+.band-name {
+    font-weight: 900
+}
+
 .highlighted-band-name {
     color: var(--main-red);
     text-transform: uppercase;
     font-weight: 700
 }
 
-.highlighted-band-name-gron {
+.highlighted-band-name-yellow {
     color: var(--main-yellow);
     text-transform: uppercase;
     font-weight: 700
+}
+
+.single-name {
+    font-weight: 900
 }
 
 
@@ -547,19 +599,19 @@ i.fa-scale-s {
     color: var(--main-white);
 }
 
-.socials a.email-icon:hover {
+a.email-icon:hover {
     color: var(--main-red)
 }
 
-.socials a.facebook-icon:hover {
-    color: var(--main-yellow)
+a.facebook-icon:hover {
+    color: var(--main-blue)
 }
 
-.socials a.instagram-icon:hover {
-    color: var(--main-gron)
+a.instagram-icon:hover {
+    color: var(--main-blue)
 }
 
-.socials a.twitter-icon:hover {
+a.twitter-icon:hover {
     color: var(--main-velvetta)
 }
 
@@ -628,7 +680,7 @@ nav.main-menu li a {
 }
 
 nav.main-menu li.nav-listen a:hover {
-    color: var(--main-red);
+    color: var(--main-gron);
     transition: all .2s ease-out;
 }
 
@@ -638,8 +690,87 @@ nav.main-menu li.nav-live-shows a:hover {
 }
 
 nav.main-menu li.nav-about a:hover {
+    color: var(--main-red);
+    transition: all .2s ease-out;
+}
+
+/* EPK Navigation
+--------------------------------------------- */
+
+nav.epk-main-menu ul {
+    display: flex;
+    justify-content: right;
+}
+
+nav.epk-main-menu ul {
+    padding: 0;
+}
+
+nav.epk-main-menu li {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    list-style: none;
+    background-color: var(--main-black);
+    padding: 1.2rem;
+    margin: 0.6rem;
+    font-weight: 900;
+    display: inline;
+    text-align: center;
+    transform: skew(-10deg);
+}
+
+nav.epk-main-menu li a {
+    color: var(--main-white);
+}
+
+nav.epk-main-menu li a.email-icon:hover {
     color: var(--main-gron);
     transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.facebook-icon:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.instagram-icon:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.twitter-icon:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.youtube-icon:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.spotify-icon:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.soundcloud-icon:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+nav.epk-main-menu li a.dice-fm-txt:hover {
+    color: var(--main-gron);
+    transition: all .2s ease-out;
+}
+
+ul.epk-media-social {
+    color: var(--main-white);
+    list-style: none;
+}
+
+ul.epk-media-social a {
+    color: var(--main-white);
 }
 
 
@@ -820,7 +951,17 @@ nav.main-menu li.nav-about a:hover {
 }
 
 .blurb {
-    padding: 3rem
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* EPK Section
+--------------------------------------------- */
+
+.epk-section {
+    padding: 1rem 6rem 6rem 6rem;
+    background: url('../img/band_wide.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Band Profiles Section
@@ -866,4 +1007,5 @@ nav.main-menu li.nav-about a:hover {
 
 .main-footer {
     padding: 1rem;
+    text-align: center;
 }
