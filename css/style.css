@@ -525,6 +525,10 @@ i.fa-scale-s {
     top: 0.02em
 }
 
+.q-fixed-3 {
+    top: -0.03em;
+}
+
 .inverted {
     background-color: var(--main-white);
     color: var(--main-black)
@@ -861,6 +865,11 @@ nav.main-menu li.nav-about a:hover {
     }
 }
 
+.tour-date-ul {
+    display: flex;
+    align-items: center;
+}
+
 /* About Section
 --------------------------------------------- */
 
@@ -1065,11 +1074,7 @@ ul.complete-gig-list li {
     .epk-image-gallery, .epk-asset-gallery {
         flex-direction: column;
         text-align: center;
-        padding: 2.4rem 6rem
-    }
-    .epk-image-gallery img, .epk-asset-gallery img {
-        max-width: 90%;
-        height: auto
+
     }
 }
 
