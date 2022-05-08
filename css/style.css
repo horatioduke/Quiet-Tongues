@@ -612,11 +612,11 @@ a.email-icon:hover {
 }
 
 a.facebook-icon:hover {
-    color: var(--main-blue)
+    color: var(--main-yellow)
 }
 
 a.instagram-icon:hover {
-    color: var(--main-blue)
+    color: var(--main-gron)
 }
 
 a.twitter-icon:hover {
@@ -890,9 +890,18 @@ nav.main-menu li.nav-about a:hover {
 
 .epk-section {
     padding: 1rem 6rem 6rem 6rem;
-    background: url('../img/band_wide.jpg');
+    background: url('../img/epk_assets/band_epk.jpg');
     background-position: center;
     background-size: cover;
+}
+
+.epk-section > .band-bio {
+    padding-top: 7.2rem;
+}
+
+.epk-content-header {
+    display: flex;
+    align-items: center;
 }
 
 /* Band Profiles Section
@@ -958,17 +967,19 @@ nav.epk-main-menu li {
     text-transform: uppercase;
     font-size: 3rem;
     list-style: none;
-    background-color: var(--main-black);
-    padding: 1.2rem;
-    margin: 0.6rem;
     font-weight: 900;
     display: inline;
     text-align: center;
     transform: skew(-10deg);
+    margin: 0.6rem;
 }
 
 nav.epk-main-menu li a {
     color: var(--main-white);
+    background-color: var(--main-black);
+    display:block;
+    padding: 1.2rem;
+    margin: 0.6rem;
 }
 
 nav.epk-main-menu li a:hover {
@@ -997,6 +1008,7 @@ ul.epk-media-social a {
 
 ul.epk-socials {
     padding: 0;
+    margin: 0;
     align-items: center;
 }
 
@@ -1006,6 +1018,8 @@ ul.epk-socials {
 
 ul.epk-socials a {
     color: var(--main-gron);
+    display: block;
+    
 }
 
 ul.epk-socials a:hover {
@@ -1013,7 +1027,6 @@ ul.epk-socials a:hover {
 }
 
 ul.epk-socials li {
-    background-color: var(--main-blue);
     color: var(--main-gron);
     transform: skew(-10deg);
     font-weight: 900;
@@ -1040,6 +1053,34 @@ ul.complete-gig-list li {
 }
 
 .epk-download-list a:hover {
+    color: var(--main-yellow);
+    transition: all .2s ease-out;
+}
+
+.epk-image-gallery, .epk-asset-gallery {
+    display: flex;
+}
+
+@media(max-width:72em) {
+    .epk-image-gallery, .epk-asset-gallery {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.4rem 6rem
+    }
+    .epk-image-gallery img, .epk-asset-gallery img {
+        max-width: 75%;
+        height: auto
+    }
+}
+
+.epk-image-gallery a, .epk-asset-gallery a {
+    padding: 0.6rem;
+    margin: 0.6rem;
+    color: var(--main-gron);
+    transition: all 0.05s;
+}
+
+.epk-image-gallery a:hover, .epk-asset-gallery a:hover {
     color: var(--main-yellow);
     transition: all .2s ease-out;
 }
