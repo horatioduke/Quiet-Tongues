@@ -1068,7 +1068,7 @@ ul.complete-gig-list li {
         padding: 2.4rem 6rem
     }
     .epk-image-gallery img, .epk-asset-gallery img {
-        max-width: 75%;
+        max-width: 90%;
         height: auto
     }
 }
