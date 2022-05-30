@@ -902,6 +902,7 @@ nav.main-menu li.nav-about a:hover {
     background: url('../img/epk_assets/band_epk.jpg');
     background-position: center;
     background-size: cover;
+    height: 100vh;
 }
 
 .epk-section > .band-bio {
@@ -918,6 +919,14 @@ nav.main-menu li.nav-about a:hover {
 
 .ennui-section {
     background: url('../img/ennui/Ennui_cover_front_no_text_FINAL.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+@media(min-width:75em) {
+    .ennui-section {
+        background-position: 50% 20%;
+    }
 }
 
 .ennui-section > .band-bio {
