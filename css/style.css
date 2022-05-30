@@ -902,7 +902,6 @@ nav.main-menu li.nav-about a:hover {
     background: url('../img/epk_assets/band_epk.jpg');
     background-position: center;
     background-size: cover;
-    height: 100vh;
 }
 
 .epk-section > .band-bio {
