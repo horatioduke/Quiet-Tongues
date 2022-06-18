@@ -342,6 +342,14 @@ p.strikethrough {
     font-family: Arial, sans-serif !important;
 }
 
+.make-chonk {
+    font-weight: 900;
+}
+
+.less-chonk {
+    font-weight: 700;
+}
+
 
 /* Link Styling
 --------------------------------------------- */
@@ -726,6 +734,11 @@ nav.main-menu li.nav-about a:hover {
 
 .welcome-section {
     min-height: 100vh
+}
+
+.listen-now a {
+    text-decoration: none;
+    color: white;
 }
 
 .listen-now a:hover {
