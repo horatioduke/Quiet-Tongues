@@ -350,6 +350,10 @@ p.strikethrough {
     font-weight: 700;
 }
 
+.even-bigger {
+    font-size: 4.8rem;
+}
+
 
 /* Link Styling
 --------------------------------------------- */
