@@ -818,67 +818,72 @@ nav.main-menu li.nav-about a:hover {
 --------------------------------------------- */
 
 .tour-section {
-    padding: 1.8rem 0;
-    background-color: var(--main-white);
-    color: var(--main-black)
-}
-
-.tour-header {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 1rem
+    padding: 1.8rem 5.4rem;
+    background-color: var(--main-black);
+    color: var(--main-white)
 }
 
 .tour-grid {
-    padding: 3rem 10.2rem;
-    align-items: center;
-    font-family: Arial, sans-serif !important;
-    font-style: italic;
-    align-content: center;
-    justify-content: center;
-    gap: 10.2rem
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 3.0rem;
+    text-transform: uppercase;
+    margin-bottom: 5.4rem;
 }
 
-.gig-title {
-    margin: 0;
-    padding: 1.2rem;
-    transition: all .2s ease-out
-}
-
-.gig-subtitle {
-    transition: all .2s ease-out
-}
-
-.tour-grid a {
+.gig-tile {
     padding: 1.2rem;
     margin: 1.2rem;
-    background-color: var(--main-black);
-    display: inline-block;
-    color: var(--main-white)
+    color: var(--main-white);
+}
+
+.gig-time {
+    color: var(--main-velvetta);
+    text-align: left;
+}
+
+.gig-second-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.gig-venue {
+    margin-right: 6rem;
 }
 
 .tour-grid a:hover, .tour-grid a:hover .gig-tix-btn {
     color: var(--main-red);
 }
 
-.tour-grid h2 {
-    transition: all .2s ease-out
-}
-
 .gig-tix-btn {
-    text-transform: uppercase;
-    font-weight: 900;
-    display: block;
     background-color: var(--main-white);
     color: var(--main-black);
-    padding: 2.4rem;
-    margin-bottom: 0;
-    transition: all .2s ease-out
+    padding: 1.2rem;
+    margin-left: 1.2rem;
 }
 
 @media(max-width:75em) {
     .tour-section {
         padding: 3rem 0
+    }
+    .gig-time {
+        text-align: center;
+    }
+    .gig-second-line {
+        flex-direction: column;
+        text-align: center;
+    }
+    .gig-venue {
+        margin-right: 0;
+    }
+    
+    .gig-tix-btn {
+        margin-top: 1rem;
     }
 }
 
