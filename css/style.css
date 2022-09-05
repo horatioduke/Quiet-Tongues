@@ -460,8 +460,8 @@ blockquote {
     font-style: italic;
     color: var(--main-gray);
     padding: 9.0rem 3.6rem 4.2rem 6.0rem;
-    border-left: 8px solid var(--main-yellow);
-    border-right: 8px solid var(--main-yellow);
+    border-left: 8px solid var(--main-gron);
+    border-right: 8px solid var(--main-gron);
     line-height : 1.5;
     position: relative;
     background:var(--main-white);
@@ -763,7 +763,7 @@ nav.main-menu li.nav-about a:hover {
 }
 
 .ticker-tape-area .output-text:after {
-    content: "█";
+    content: "â–ˆ";
     position: relative;
     bottom: 1px;
     left: 3px;
@@ -952,6 +952,25 @@ nav.main-menu li.nav-about a:hover {
 }
 
 .ennui-section > .band-bio {
+    max-width: 100%;
+}
+
+/* TWIW EPK Section
+--------------------------------------------- */
+
+.twiw-section {
+    background: url('../img/twiw/TWIW_cover_front_no_text_FINAL.jpg');
+    background-position: 0 -25%;
+    background-size: cover;
+}
+
+@media(min-width:75em) {
+    .twiw-section {
+        background-position: 50% 20%;
+    }
+}
+
+.twiw-section > .band-bio {
     max-width: 100%;
 }
 
