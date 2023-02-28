@@ -601,6 +601,10 @@ i.fa-scale-s {
     font-weight: 900
 }
 
+.struck-out {
+    text-decoration: line-through;
+}
+
 
 /* Socials
 --------------------------------------------- */
