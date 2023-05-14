@@ -925,7 +925,7 @@ nav.main-menu li.nav-about a:hover {
 
 .epk-section {
     padding: 1rem 6rem 6rem 6rem;
-    background: url('../img/epk_assets/band_epk.jpg');
+    background: url('../assets/img/band/2023 Photoshoot/band_1.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -977,6 +977,26 @@ nav.main-menu li.nav-about a:hover {
 .twiw-section > .band-bio {
     max-width: 100%;
 }
+
+/* Velvet EPK Section
+--------------------------------------------- */
+
+.velvet-section {
+    background: url('../img/velvet/velvet_cover.jpg');
+    background-position: 0 -25%;
+    background-size: cover;
+}
+
+@media(min-width:75em) {
+    .velvet-section {
+        background-position: 50% 20%;
+    }
+}
+
+.velvet-section > .band-bio {
+    max-width: 100%;
+}
+
 
 /* Band Profiles Section
 --------------------------------------------- */
@@ -1132,11 +1152,20 @@ ul.complete-gig-list li {
 }
 
 .epk-image-gallery, .epk-asset-gallery {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.epk-image-gallery.gallery-match-height {
+    display: flex !important;
 }
 
 @media(max-width:72em) {
     .epk-image-gallery, .epk-asset-gallery {
+        display: flex;
         flex-direction: column;
         text-align: center;
 
@@ -1158,4 +1187,9 @@ ul.complete-gig-list li {
 .home-video-container {
     text-align: center;
     padding-bottom: 4.8rem;
+}
+
+.youtube-embed iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
 }
