@@ -1,0 +1,238 @@
+/*
+Ello! This is the stylesheet for quiettongues.com
+*/
+
+@font-face {
+    font-family: 'Syne';
+    src: url('../assets/fonts/Syne/static/Syne-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../assets/fonts/Courier_Prime/CourierPrime-Regular.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+:root {
+    --qt-white: #F2F2F2;
+    --qt-black: #262626;
+    --qt-accent: #FF6F61;
+}
+
+html {
+    background: var(--qt-black);
+    color: var(--qt-white);
+    font-family: 'Courier Prime';
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+}
+
+button, .button, input[type="submit"] {
+    -webkit-appearance: none; /* overrides default styles in iOS */
+    appearance: none; /* overrides default styles in iOS */
+    border-radius: 0;
+    padding: 6px;
+    background-color: var(--qt-white);
+    color: var(--qt-black);
+    font-weight: 200;
+    border: solid 1px var(--qt-black);
+}
+
+button:hover, .button:hover, input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--qt-accent);
+    position: relative;
+  }
+
+ul li a:hover, p a:hover, span a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne';
+    text-transform: uppercase;
+}
+
+#hero video {
+    width: 100%;
+    overflow-y: hidden;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.accented {
+    color: var(--qt-accent);
+}
+
+.central-section-width {
+    max-width: 900px;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--qt-black);
+    padding: 6px 36px 30px 36px;
+    transform: translate(-50%, -50%);
+}
+
+.highlighted-release {
+    color: var(--qt-accent);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    margin: 0 24px;
+}
+
+#newsletter {
+    position: relative;
+    top: -12px;
+    background-color: var(--qt-white);
+    background-image: url('../assets/graphics/pot-pourri.png');
+    background-size: auto 100%;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+}
+
+#newsletter form {
+    margin: 0 auto;
+    padding: 24px 0;
+    line-height: 1;
+}
+
+label[for="mce-EMAIL"] {
+    background-color: var(--qt-black);
+    padding: 10px;
+}
+
+input[type="email"] {
+    min-width: 300px;
+    padding: 6px;
+}
+
+.newsletter-signup-label {
+    font-family: Syne;
+    text-transform: uppercase;
+}
+
+#mc_embed_signup_scroll {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 12px;
+}
+
+#tours {
+    margin: 60px auto 0;
+}
+
+article.tour-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bio {
+    margin: 60px auto 0;
+}
+
+#foot {
+    margin: 60px auto 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.separator {
+    margin: 0 24px;
+}
+
+@media (max-width: 1200px) {
+    .central-section-width, .epk-central-column {
+        padding: 0 24px;
+    }
+    #welcome {
+        width: 100%;
+    }
+}
+
+/* EPK */
+
+.epk-h2 {
+    color: var(--qt-accent);
+    margin-top: 60px;
+}
+
+.epk-central-column {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#epk-socials ul li, #epk-press ul li, #tour-archive ul li {
+    line-height: 1.5;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.gallery-grid img, .branding-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.branding-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.branding-full-width {
+    grid-column: 1 / -1;
+}
+
+.branding-half-width {
+    grid-column: span 1;
+}
+
+@media (min-width: 600px) {
+    .branding-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .branding-full-width {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
