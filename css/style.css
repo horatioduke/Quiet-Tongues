@@ -26,7 +26,7 @@ html {
     background: var(--qt-black);
     color: var(--qt-white);
     font-family: 'Courier Prime';
-    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    font-size: clamp(1.8rem, 1.8vh, 2rem);
 }
 
 button, .button, input[type="submit"] {
@@ -103,8 +103,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #newsletter {
-    position: relative;
-    top: -12px;
     background-color: var(--qt-white);
     background-image: url('../assets/graphics/pot-pourri.png');
     background-size: auto 100%;
