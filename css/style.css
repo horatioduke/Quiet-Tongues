@@ -81,9 +81,31 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: var(--qt-black);
+    /* background-color: var(--qt-black); */
     padding: 6px 36px 30px 36px;
     transform: translate(-50%, -50%);
+}
+
+#welcome header img {
+    max-width: 120px;
+}
+
+h3 a.out-now {
+  display: inline-block;
+}
+
+h3 a.out-now .chevron-left,
+h3 a.out-now .chevron-right {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+h3 a.out-now:hover .chevron-left {
+  transform: translateX(5px);
+}
+
+h3 a.out-now:hover .chevron-right {
+  transform: translateX(-5px);
 }
 
 .highlighted-release {
